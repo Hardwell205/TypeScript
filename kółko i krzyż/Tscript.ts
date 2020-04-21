@@ -14,6 +14,13 @@ class Board {
         this.table[p].style.color = "#25bfc4";
         this.table[p].innerHTML = "O";
         }
+    ClickCell1(x: number, y: number){
+        
+   
+            var p = 3 * (x - 1) + (y - 1);
+            this.table[p].style.color = "#25bfc4";
+            this.table[p].innerHTML = "O";
+            }
     }
 
 window.onload = () => {
