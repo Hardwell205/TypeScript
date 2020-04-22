@@ -14,10 +14,15 @@ var Board = /** @class */ (function () {
     Board.prototype.ClickCell = function (x, y) {
         if (this.turn == true) {
             var P = 3 * (x - 1) + (y - 1);
-            this.table[P].style.color = "#25bfc4";
-            this.table[P].innerHTML = "O";
-            this.board[P] = 1;
-            this.turn = false;
+            if (this.board[P] !== this.board[0]) {
+                alert("To pole jest już zajęte");
+            }
+            else {
+                this.table[P].style.color = "#25bfc4";
+                this.table[P].innerHTML = "O";
+                this.board[P] = 1;
+                this.turn = false;
+            }
             if (this.win(this.board) == 1) {
                 alert("Wygrywa O!");
             }
@@ -27,10 +32,15 @@ var Board = /** @class */ (function () {
         }
         else {
             var P = 3 * (x - 1) + (y - 1);
-            this.table[P].style.color = "#25bfc4";
-            this.table[P].innerHTML = "X";
-            this.board[P] = -1;
-            this.turn = true;
+            if (this.board[P] !== this.board[0]) {
+                alert("To pole jest już zajęte");
+            }
+            else {
+                this.table[P].style.color = "#25bfc4";
+                this.table[P].innerHTML = "X";
+                this.board[P] = -1;
+                this.turn = true;
+            }
             if (this.win(this.board) == -1) {
                 alert("Wygrywa X!");
             }
