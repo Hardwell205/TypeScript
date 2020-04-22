@@ -15,31 +15,34 @@ class Board {
     }
     ClickCell(x: number, y: number){
         if(this.turn==true){
-
+            
         var P = 3 * (x - 1) + (y - 1);
         this.table[P].style.color = "#25bfc4";
         this.table[P].innerHTML = "O";
         this.board[P]=1;
         this.turn =false;
+    
         if(this.win(this.board)==1){
                 alert("Wygrywa O!");
         }
-        if(this.Draw()){
+        else if(this.Draw()){
             alert('Remis!')
         }
             }
         
             else{
+                
 
             var P = 3 * (x - 1) + (y - 1);
             this.table[P].style.color = "#25bfc4";
             this.table[P].innerHTML = "X";
             this.board[P]=-1;
             this.turn=true;
+        
             if(this.win(this.board)==-1){
                 alert("Wygrywa X!");
             }
-            if(this.Draw()){
+            else if(this.Draw()){
                 alert('Remis!')
             }
                 }

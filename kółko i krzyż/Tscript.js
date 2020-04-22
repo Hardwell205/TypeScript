@@ -21,7 +21,7 @@ var Board = /** @class */ (function () {
             if (this.win(this.board) == 1) {
                 alert("Wygrywa O!");
             }
-            if (this.Draw()) {
+            else if (this.Draw()) {
                 alert('Remis!');
             }
         }
@@ -34,7 +34,7 @@ var Board = /** @class */ (function () {
             if (this.win(this.board) == -1) {
                 alert("Wygrywa X!");
             }
-            if (this.Draw()) {
+            else if (this.Draw()) {
                 alert('Remis!');
             }
         }
