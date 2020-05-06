@@ -96,4 +96,4 @@ cell23.onclick = () => { cell.ClickCell(2, 3);}
 cell31.onclick = () => { cell.ClickCell(3, 1);}
 cell32.onclick = () => { cell.ClickCell(3, 2);}
 cell33.onclick = () => { cell.ClickCell(3, 3);}
-}
+}c
